@@ -1,0 +1,42 @@
+{
+  "name": "aoc",
+  "version": "0.0.1",
+  "description": "aoc",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p aoc",
+    "exportedEnv": {
+      "OCAMLRUNPARAM": {
+        "val": "b",
+        "scope": "global"
+      }
+    }
+  },
+  "scripts": {
+    "format": "esy dune build @fmt --auto-promote",
+    "test": "esy '@test' x test_exe",
+    "exe": "esy '@exe' x exe"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": "*",
+    "@reason-native/console": "^0.1.0",
+    "@reason-native/fp": "*",
+    "@reason-native/fs": "*",
+    "@reason-native/cli": "*",
+    "@reason-native/rely": "^3.2.1",
+    "ocaml": "~4.9.0",
+    "@chess-tea/bread": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam",
+    "refmterr": "*"
+  },
+  "resolutions": {
+    "@chess-tea/bread": "chess-tea/bread:package.json#9137239",
+    "@reason-native/cli": "ManasJayanth/reason-native:cli.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+    "@reason-native/fs": "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+    "@reason-native/fp": "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
+  }
+}
