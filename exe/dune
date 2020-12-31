@@ -7,6 +7,7 @@
   (libraries
     bread
     aoc
+    cli.lib
   )
 )
 
